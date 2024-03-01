@@ -20,6 +20,8 @@ def main():
     ys = [calc_circumference(x) for x in xs]
     plt.plot(xs, ys)
     plt.xlabel("n")
+    plt.xlim(1, 20)
+    plt.xticks(list(range(1,21)))
     plt.ylabel("Circumference")
     plt.plot(list(range(1,20)), [math.pi for _ in range(1,20)], label="pi", linestyle="--")
     plt.legend()
