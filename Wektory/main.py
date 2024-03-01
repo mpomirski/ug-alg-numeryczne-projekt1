@@ -13,15 +13,15 @@ def calc_circumference(n: int) -> float | np.floating:
     return circumference
 
 def main():
-    n = 100
+    n = 20
     circumference = calc_circumference(n)
     print(f"Circumference for n = {n} is {circumference}")
-    xs = list(range(1,100))
+    xs = list(range(1,20))
     ys = [calc_circumference(x) for x in xs]
     plt.plot(xs, ys)
     plt.xlabel("n")
     plt.ylabel("Circumference")
-    plt.plot(list(range(1,100)), [math.pi for _ in range(1,100)], label="pi", linestyle="--")
+    plt.plot(list(range(1,20)), [math.pi for _ in range(1,20)], label="pi", linestyle="--")
     plt.legend()
     plt.grid()
     plt.show()
