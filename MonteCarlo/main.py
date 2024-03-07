@@ -4,12 +4,13 @@ import pandas as pd
 from terminaltables import AsciiTable
 
 PI = math.pi
+max_power_of_n = 8
 
 table_data = [
     ["Wielkosc probki", "Przyblizenie", "Blad wzgledny przyblizenia"]
 ]
 
-for n in range(8):
+for n in range(1, max_power_of_n):
     counter = 0
     size = 10 ** n
     for i in range(size):
@@ -18,9 +19,8 @@ for n in range(8):
         if math.sqrt(x_cord * x_cord + y_cord * y_cord) <= 1:
             counter += 1
     pi_approximation = 4 * counter / size
-    relative_error = "{:.6f}".format(abs(PI - pi_approximation) / PI) + "%"
+    relative_error = "{:.6f}".format((abs(PI - pi_approximation) / PI) * 100) + "%"
     table_data.append([size, pi_approximation, relative_error])
 
 table = AsciiTable(table_data, "Aproksymacja Pi metoda Monte Carlo")
 print(table.table)
-
