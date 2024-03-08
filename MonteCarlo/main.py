@@ -1,6 +1,7 @@
 import math
 import random
 import pandas as pd
+# Tabelke wykonano dzieki bibliotece terminaltables oraz poradnikowi zamieszczonemu na tej stronie: https://pypi.org/project/terminaltables/
 from terminaltables import AsciiTable
 
 PI = math.pi
