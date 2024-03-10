@@ -1,7 +1,22 @@
+# Michał Pomirski 10.03.2024
 import math
 import numpy as np
 import matplotlib.pyplot as plt
 from typing import Any
+'''
+Wyznaczanie obwodu wielokąta foremnego o n wierzchołkach wpisanego w okrąg.
+Funkcje:
+    calc_circumference(n: int) -> float
+        Oblicza obwód wielokąta foremnego o n wierzchołkach wpisanego w okrąg.
+    calc_diffs() -> None
+        Oblicza i wypisuje różnice pomiędzy obliczonymi wartościami obwodu a wartościami oczekiwanymi dla n = 1, 10, 100, 1000, 10000, 100000
+    calc_sum_diff(n: int) -> np.ndarray
+        Oblicza różnice pomiędzy sumą wektorów w1, w2, ..., wi+1 oraz w0.
+    print_sum_diffs() -> None
+        Wypisuje różnice pomiędzy sumą wektorów w1, w2, ..., wn oraz w0 dla n = 1, 10, 100, 1000, 10000, 100000
+    main() -> None
+        Wywołuje funkcje calc_diffs, print_sum_diffs oraz rysuje wykres obliczonej wartości obwodu dla n = 1, 2, ..., 20
+'''
 
 def calc_circumference(n: int) -> float:
     theta: float = 2*math.pi/n
